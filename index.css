@@ -1,3 +1,635 @@
-body{
-    background-color: red;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  margin: 0;
 }
+
+.container {
+  width: 1024px;
+  padding: 20px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-width: 20px;
+  border-image-source: linear-gradient(to top, #00bdd6, #013872);
+  position: relative;
+  margin: 0 auto;
+}
+
+@media print {
+  .container {
+    height: 1483px;
+  }
+}
+
+.container header {
+  width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container header div.image {
+  width: 200px;
+  margin-left: 15px;
+}
+
+.container header div.image img {
+  width: 200px;
+  height: 200px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  border-radius: 50%;
+}
+
+.container header div.name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #6e6e6e;
+}
+
+.container header div.name h1 {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.container header div.name div {
+  color: #66a8dc;
+  font-size: 1.2em;
+}
+
+.container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .wrapper aside {
+  width: 650px;
+  padding: 40px 20px 20px 0;
+}
+
+.container .wrapper aside .contact a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+.container .wrapper aside .contact .icons {
+  padding-top: 30px;
+}
+
+.container .wrapper aside .contact .icons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 15px;
+}
+
+.container .wrapper aside .contact .icons a img {
+  height: 30px;
+  padding-right: 40px;
+}
+
+.container .wrapper .border {
+  width: 5px;
+  margin-top: 70px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(50%, #00bdd6), to(#013872));
+  background-image: linear-gradient(0deg, #fff 0%, #00bdd6 50%, #013872 100%);
+}
+
+.container .wrapper .content {
+  padding: 40px 10px 20px 20px;
+}
+
+.container .wrapper .content article {
+  margin-bottom: 50px;
+}
+
+.container .wrapper .content article h3 {
+  position: relative;
+}
+
+.container .wrapper .content article h3::before {
+  content: " ";
+  width: 11px;
+  height: 11px;
+  background-color: #013872;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: -27px;
+}
+
+.container .wrapper .content article.experience h4 {
+  margin-bottom: 0;
+}
+
+.container .wrapper .content article.projects div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.container .wrapper .content article.projects div a {
+  color: black;
+  font-weight: 600;
+  font-style: italic;
+  width: 150px;
+  display: inline-block;
+}
+
+.container .wrapper .content article.projects div span {
+  display: inline-block;
+  width: 500px;
+}
+
+.container .wrapper .content article .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .wrapper .content article .skills .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .wrapper .content article .skills .skill span {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.container .wrapper .content article .skills .skill .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#00bdd6, #013872);
+  z-index: 1;
+  position: relative;
+}
+
+.container .wrapper .content article .skills .skill .circle::after {
+  content: " ";
+  z-index: 3;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.container .wrapper .content article .skills .skill .circle::before {
+  content: " ";
+  z-index: 2;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="1"]::before {
+  background: conic-gradient(transparent 1%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="2"]::before {
+  background: conic-gradient(transparent 2%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="3"]::before {
+  background: conic-gradient(transparent 3%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="4"]::before {
+  background: conic-gradient(transparent 4%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="5"]::before {
+  background: conic-gradient(transparent 5%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="6"]::before {
+  background: conic-gradient(transparent 6%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="7"]::before {
+  background: conic-gradient(transparent 7%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="8"]::before {
+  background: conic-gradient(transparent 8%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="9"]::before {
+  background: conic-gradient(transparent 9%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="10"]::before {
+  background: conic-gradient(transparent 10%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="11"]::before {
+  background: conic-gradient(transparent 11%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="12"]::before {
+  background: conic-gradient(transparent 12%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="13"]::before {
+  background: conic-gradient(transparent 13%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="14"]::before {
+  background: conic-gradient(transparent 14%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="15"]::before {
+  background: conic-gradient(transparent 15%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="16"]::before {
+  background: conic-gradient(transparent 16%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="17"]::before {
+  background: conic-gradient(transparent 17%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="18"]::before {
+  background: conic-gradient(transparent 18%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="19"]::before {
+  background: conic-gradient(transparent 19%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="20"]::before {
+  background: conic-gradient(transparent 20%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="21"]::before {
+  background: conic-gradient(transparent 21%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="22"]::before {
+  background: conic-gradient(transparent 22%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="23"]::before {
+  background: conic-gradient(transparent 23%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="24"]::before {
+  background: conic-gradient(transparent 24%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="25"]::before {
+  background: conic-gradient(transparent 25%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="26"]::before {
+  background: conic-gradient(transparent 26%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="27"]::before {
+  background: conic-gradient(transparent 27%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="28"]::before {
+  background: conic-gradient(transparent 28%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="29"]::before {
+  background: conic-gradient(transparent 29%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="30"]::before {
+  background: conic-gradient(transparent 30%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="31"]::before {
+  background: conic-gradient(transparent 31%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="32"]::before {
+  background: conic-gradient(transparent 32%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="33"]::before {
+  background: conic-gradient(transparent 33%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="34"]::before {
+  background: conic-gradient(transparent 34%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="35"]::before {
+  background: conic-gradient(transparent 35%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="36"]::before {
+  background: conic-gradient(transparent 36%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="37"]::before {
+  background: conic-gradient(transparent 37%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="38"]::before {
+  background: conic-gradient(transparent 38%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="39"]::before {
+  background: conic-gradient(transparent 39%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="40"]::before {
+  background: conic-gradient(transparent 40%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="41"]::before {
+  background: conic-gradient(transparent 41%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="42"]::before {
+  background: conic-gradient(transparent 42%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="43"]::before {
+  background: conic-gradient(transparent 43%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="44"]::before {
+  background: conic-gradient(transparent 44%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="45"]::before {
+  background: conic-gradient(transparent 45%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="46"]::before {
+  background: conic-gradient(transparent 46%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="47"]::before {
+  background: conic-gradient(transparent 47%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="48"]::before {
+  background: conic-gradient(transparent 48%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="49"]::before {
+  background: conic-gradient(transparent 49%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="50"]::before {
+  background: conic-gradient(transparent 50%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="51"]::before {
+  background: conic-gradient(transparent 51%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="52"]::before {
+  background: conic-gradient(transparent 52%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="53"]::before {
+  background: conic-gradient(transparent 53%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="54"]::before {
+  background: conic-gradient(transparent 54%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="55"]::before {
+  background: conic-gradient(transparent 55%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="56"]::before {
+  background: conic-gradient(transparent 56%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="57"]::before {
+  background: conic-gradient(transparent 57%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="58"]::before {
+  background: conic-gradient(transparent 58%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="59"]::before {
+  background: conic-gradient(transparent 59%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="60"]::before {
+  background: conic-gradient(transparent 60%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="61"]::before {
+  background: conic-gradient(transparent 61%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="62"]::before {
+  background: conic-gradient(transparent 62%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="63"]::before {
+  background: conic-gradient(transparent 63%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="64"]::before {
+  background: conic-gradient(transparent 64%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="65"]::before {
+  background: conic-gradient(transparent 65%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="66"]::before {
+  background: conic-gradient(transparent 66%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="67"]::before {
+  background: conic-gradient(transparent 67%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="68"]::before {
+  background: conic-gradient(transparent 68%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="69"]::before {
+  background: conic-gradient(transparent 69%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="70"]::before {
+  background: conic-gradient(transparent 70%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="71"]::before {
+  background: conic-gradient(transparent 71%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="72"]::before {
+  background: conic-gradient(transparent 72%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="73"]::before {
+  background: conic-gradient(transparent 73%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="74"]::before {
+  background: conic-gradient(transparent 74%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="75"]::before {
+  background: conic-gradient(transparent 75%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="76"]::before {
+  background: conic-gradient(transparent 76%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="77"]::before {
+  background: conic-gradient(transparent 77%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="78"]::before {
+  background: conic-gradient(transparent 78%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="79"]::before {
+  background: conic-gradient(transparent 79%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="80"]::before {
+  background: conic-gradient(transparent 80%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="81"]::before {
+  background: conic-gradient(transparent 81%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="82"]::before {
+  background: conic-gradient(transparent 82%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="83"]::before {
+  background: conic-gradient(transparent 83%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="84"]::before {
+  background: conic-gradient(transparent 84%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="85"]::before {
+  background: conic-gradient(transparent 85%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="86"]::before {
+  background: conic-gradient(transparent 86%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="87"]::before {
+  background: conic-gradient(transparent 87%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="88"]::before {
+  background: conic-gradient(transparent 88%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="89"]::before {
+  background: conic-gradient(transparent 89%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="90"]::before {
+  background: conic-gradient(transparent 90%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="91"]::before {
+  background: conic-gradient(transparent 91%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="92"]::before {
+  background: conic-gradient(transparent 92%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="93"]::before {
+  background: conic-gradient(transparent 93%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="94"]::before {
+  background: conic-gradient(transparent 94%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="95"]::before {
+  background: conic-gradient(transparent 95%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="96"]::before {
+  background: conic-gradient(transparent 96%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="97"]::before {
+  background: conic-gradient(transparent 97%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="98"]::before {
+  background: conic-gradient(transparent 98%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="99"]::before {
+  background: conic-gradient(transparent 99%, #e6e6e6 0);
+}
+
+.container .wrapper .content article .skills .skill .circle[data-procentaje="100"]::before {
+  background: conic-gradient(transparent 100%, #e6e6e6 0);
+}
+/*# sourceMappingURL=index.css.map */
